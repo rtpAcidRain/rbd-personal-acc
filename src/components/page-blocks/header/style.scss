@@ -1,0 +1,120 @@
+.header {
+  height: var(--header);
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 999;
+
+  .lang-switcher {
+    @apply flex items-center justify-center rounded-[200px] border border-text1 px-[11px] py-[3px] w-fit;
+    transition: color 0.2s ease-in, background-color 0.2s ease-in,
+      border-color 0.2s ease-in;
+    span {
+      @apply text-body5;
+      display: flex;
+      align-items: center;
+    }
+
+    &:hover {
+      @apply border-red bg-red text-white;
+    }
+  }
+
+  .account-button {
+    position: relative;
+
+    &__container {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      height: 100%;
+      margin-left: auto;
+      width: fit-content;
+
+      &::after {
+        content: url("data:image/svg+xml,%3Csvg viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.9707 6L8.9707 10L4.9707 6' stroke='%23222222'/%3E%3C/svg%3E%0A");
+        width: 17px;
+        height: 16px;
+      }
+    }
+
+    &__icon {
+      @apply bg-text2 flex items-center justify-center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+    }
+
+    &::before {
+      @apply bg-blue;
+      content: "";
+      display: block;
+      width: 149.114157px;
+      height: 1px;
+      transform-origin: center;
+      transform: rotate(57deg);
+      position: absolute;
+      left: -35px;
+      top: 57px;
+    }
+  }
+
+  &__bar {
+    @apply flex w-fit h-full items-center;
+    gap: 45px;
+    padding-left: 31.5px;
+
+    & > a:not(.lang-switcher) {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      span {
+        display: block;
+        position: relative;
+        width: 32px;
+        height: 32px;
+      }
+
+      &.active span {
+        &::after {
+          @apply bg-red;
+          content: "";
+          top: 5px;
+          right: 4px;
+          position: absolute;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+.reports {
+  margin-top: calc(var(--header) + 40px);
+  &__filter {
+    &-container {
+      gap: 0 !important;
+      display: grid !important;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .switcher__tab {
+      @apply transition-colors;
+      padding: 16px 0 14px;
+      text-align: center;
+      width: unset;
+      border-bottom: 2px solid rgb(205 213 244);
+
+      &.active,
+      &:hover {
+        @apply bg-bullets-level1;
+        border-color: rgba(41, 56, 111, 1);
+
+        font-weight: 700;
+      }
+    }
+  }
+}

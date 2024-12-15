@@ -1,0 +1,132 @@
+<div class="sidemenu active">
+  <button type="button" class="sidemenu__toggleButton">
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M19.791 7.2915H5.20768" stroke="white" stroke-linecap="round" />
+      <path d="M19.791 12.5H5.20768" stroke="white" stroke-linecap="round" />
+      <path d="M19.791 17.7085H5.20768" stroke="white" stroke-linecap="round" />
+    </svg>
+    <div>
+      <svg
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M15.625 6.25L9.375 12.5L15.625 18.75" stroke="#162148" />
+      </svg>
+      <span> Скрыть меню </span>
+    </div>
+  </button>
+  <ul class="sidemenu__container">
+    <li class="active">
+      <a class="" href="/personal/report/sales">Отчеты по продажам</a>
+    </li>
+    <li>
+      <a href="/personal/report/acts">Акты сверок</a>
+    </li>
+  </ul>
+</div>
+<div class="container grid grid-cols-12 gap-12">
+  <div class="centered-container">
+    <h1 class="text-h3desk mb-12">Отчеты по продажам</h1>
+    <p class="text-body4 max-w-[691px] mb-16">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam lectus
+      risus, finibus ornare vestibulum et, feugiat quis dui. Vivamus sit amet
+      dolor et magna facilisis rhoncus. Curabitur maximus est sed porta
+      scelerisque. Sed suscipit, arcu volutpat feugiat posuere, eros nisi
+      tristique nibh, mollis vehicula lectus tortor eu
+    </p>
+    <div>
+      <h2 class="text-sub2 mb-12 uppercase">факт продаж</h2>
+      <form class="flex justify-between items-end">
+        <label class="input input--date hovered-line-anim">
+          <span class="input__title">Выбрать период отчетности</span>
+          <input class="input__item" type="text" id="calendar" />
+
+          <span class="icon">
+            <svg
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                x="4"
+                y="8"
+                width="24"
+                height="20"
+                rx="2"
+                stroke="#29386F"
+              />
+              <path
+                d="M4 12C4 10.1144 4 9.17157 4.58579 8.58579C5.17157 8 6.11438 8 8 8H24C25.8856 8 26.8284 8 27.4142 8.58579C28 9.17157 28 10.1144 28 12V13.3333H4V12Z"
+                fill="#29386F"
+              />
+              <path
+                d="M9.33301 4L9.33301 8"
+                stroke="#29386F"
+                stroke-linecap="round"
+              />
+              <path
+                d="M22.667 4L22.667 8"
+                stroke="#29386F"
+                stroke-linecap="round"
+              />
+              <rect
+                x="9.33301"
+                y="16"
+                width="5.33333"
+                height="2.66667"
+                rx="0.5"
+                fill="#29386F"
+              />
+              <rect
+                x="9.33301"
+                y="21.3334"
+                width="5.33333"
+                height="2.66667"
+                rx="0.5"
+                fill="#29386F"
+              />
+              <rect
+                x="17.333"
+                y="16"
+                width="5.33333"
+                height="2.66667"
+                rx="0.5"
+                fill="#29386F"
+              />
+              <rect
+                x="17.333"
+                y="21.3334"
+                width="5.33333"
+                height="2.66667"
+                rx="0.5"
+                fill="#29386F"
+              />
+            </svg>
+          </span>
+        </label>
+        <button type="button" class="button-primary !w-[214px] !py-[14px]">
+          <span>Заказать</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const calendarBut = document.getElementById("calendar");
+
+    const calendar = new AirDatepicker("#calendar", {});
+  });
+</script>

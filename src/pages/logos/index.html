@@ -1,0 +1,225 @@
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<div class="py-16 container grid grid-cols-12 gap-12 login">
+  <div class="col-start-3 col-span-8 login__container">
+    <h1 class="text-center mb-4 text-body1">
+      Для отправки формы необходимо пройти <br />
+      регистрацию на сайте
+    </h1>
+    <div class="grid grid-cols-8 gap-12">
+      <form
+        action=""
+        class="col-start-2 col-span-6 login__form"
+        autocomplete="off"
+      >
+        <div class="flex flex-col gap-4">
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">Имя*</span>
+            <input class="input__item" type="text" />
+          </label>
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">Фамилия*</span>
+            <input class="input__item" type="text" />
+          </label>
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">Логин*</span>
+            <input
+              class="input__item"
+              type="text"
+              autocomplete="off"
+              readonly
+              onfocus="this.removeAttribute('readonly')"
+            />
+          </label>
+          <label class="input input--password hovered-line-anim mb-[35px]">
+            <span class="input__title">Пароль*</span>
+            <input
+              class="input__item"
+              type="password"
+              autocomplete="off"
+              readonly
+              onfocus="this.removeAttribute('readonly')"
+            />
+            <p class="input__tip absolute text-body5">
+              Пароль должен быть не менее 6 символов
+            </p>
+          </label>
+          <label class="input input--password hovered-line-anim passwordaccess">
+            <span class="input__title">Подтверждение пароля*</span>
+            <input class="input__item" type="password" autocomplete="off" />
+          </label>
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">E-mail*</span>
+            <input class="input__item" type="text" />
+          </label>
+
+          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+          <p class="text-body5 mt-4 text-text2">Обязательные поля*</p>
+          <button type="submit" class="button-primary !w-full mt-12">
+            <span>Войти</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="py-16 container grid grid-cols-12 gap-12 login">
+  <div class="col-start-3 col-span-8 login__container">
+    <h1 class="text-center mb-4 text-body1">Пожалуйста, авторизуйтесь</h1>
+    <div class="grid grid-cols-8 gap-12">
+      <form
+        action=""
+        class="col-start-2 col-span-6 login__form"
+        autocomplete="off"
+      >
+        <div class="flex flex-col gap-4">
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">Логин*</span>
+            <input
+              class="input__item"
+              type="text"
+              autocomplete="off"
+              readonly
+              onfocus="this.removeAttribute('readonly')"
+            />
+          </label>
+          <label class="input input--password hovered-line-anim">
+            <span class="input__title">Пароль*</span>
+            <input
+              class="input__item"
+              type="password"
+              autocomplete="off"
+              readonly
+              onfocus="this.removeAttribute('readonly')"
+            />
+          </label>
+        </div>
+        <a
+          href="/"
+          class="text-center text-greyBlue text-listTitle mt-[16px] block"
+          >Забыли пароль?</a
+        >
+
+        <button type="submit" class="button-primary !w-full mt-16">
+          <span>Войти</span>
+        </button>
+      </form>
+    </div>
+    <h2 class="text-body1 text-center mt-20">
+      Если вы впервые на сайте, заполните, пожалуйста,<br />
+      регистрационную форму
+    </h2>
+    <a
+      href="/"
+      class="text-center text-greyBlue text-body3 mt-[64px] block mb-8"
+      >Зарегистрироваться</a
+    >
+  </div>
+</div>
+<div class="py-16 container grid grid-cols-12 gap-12 login">
+  <div class="col-start-3 col-span-8 login__container">
+    <h1 class="text-center mb-[24px] text-body1">
+      Выслать код для смены пароля
+    </h1>
+    <p class="text-body5 mb-4 text-center">
+      Код для смены пароля будет выслан вам на email
+    </p>
+    <div class="grid grid-cols-8 gap-12">
+      <form
+        action=""
+        class="col-start-2 col-span-6 login__form"
+        autocomplete="off"
+      >
+        <div class="flex flex-col gap-4">
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">Логин*</span>
+            <input
+              class="input__item"
+              type="text"
+              autocomplete="off"
+              readonly
+              onfocus="this.removeAttribute('readonly')"
+            /> </label
+          ><button type="submit" class="button-primary !w-full mt-12">
+            <span>Выслать код</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="py-16 container grid grid-cols-12 gap-12 login">
+  <div class="col-start-3 col-span-8 login__container">
+    <h1 class="text-center mb-16 text-body1">Смена пароля</h1>
+    <div class="grid grid-cols-8 gap-12">
+      <form
+        action=""
+        class="col-start-2 col-span-6 login__form"
+        autocomplete="off"
+      >
+        <div class="flex flex-col gap-4">
+          <label class="input input--name hovered-line-anim">
+            <span class="input__title">Введите код*</span>
+            <input
+              class="input__item"
+              type="text"
+              autocomplete="off"
+              readonly
+              onfocus="this.removeAttribute('readonly')"
+            /> </label
+          ><label class="input input--password hovered-line-anim mb-[35px]">
+            <span class="input__title">Пароль*</span>
+            <input
+              class="input__item"
+              type="password"
+              autocomplete="off"
+              readonly
+              onfocus="this.removeAttribute('readonly')"
+            />
+            <p class="input__tip absolute text-body5">
+              Пароль должен быть не менее 6 символов
+            </p>
+          </label>
+          <label class="input input--password hovered-line-anim passwordaccess">
+            <span class="input__title">Подтверждение пароля*</span>
+            <input
+              class="input__item"
+              type="password"
+              autocomplete="off"
+            /> </label
+          ><button type="submit" class="button-primary !w-full mt-12">
+            <span>Выслать код</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="py-16 container grid grid-cols-12 gap-12 login">
+  <div class="col-start-3 col-span-8 login__container">
+    <div class="grid grid-cols-8 gap-12">
+      <div class="col-start-2 col-span-6 login__form">
+        <div class="flex flex-col gap-16">
+          <svg
+            class="w-[72px] h-[72px] mx-auto"
+            viewBox="0 0 72 72"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="34.9705" cy="34.0272" r="18.9041" fill="white" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M36 63C50.9117 63 63 50.9117 63 36C63 21.0883 50.9117 9 36 9C21.0883 9 9 21.0883 9 36C9 50.9117 21.0883 63 36 63ZM35.2086 46.8405L50.2086 28.8405L45.7914 25.1595L32.8068 40.7409L26.0329 33.9671L21.9671 38.0329L30.9671 47.0329L33.1932 49.2591L35.2086 46.8405Z"
+              fill="#BC0119"
+            />
+          </svg>
+
+          <h1 class="text-center text-body1">Пароль был успешно сменен!</h1>
+          <a href="/" type="submit" class="button-primary !w-full">
+            <span>Войти</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

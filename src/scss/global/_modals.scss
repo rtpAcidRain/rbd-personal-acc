@@ -1,0 +1,101 @@
+.modal {
+  @apply fixed left-0 top-0 z-[999] hidden h-screen w-full justify-center overflow-auto p-10 md:p-20;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &__container {
+    transform: rotateX(90deg);
+    transition: transform 0.4s ease;
+  }
+
+  &.opened {
+    .modal__container {
+      transform: rotateX(0);
+    }
+  }
+}
+
+.form-modal {
+  .modal__container {
+    @apply relative m-auto w-[320px] bg-white px-8 py-[34px] md:w-[571px] md:px-12 md:py-12;
+
+    border-radius: 20px;
+
+    .modal__close {
+      @apply absolute right-4 top-4 flex h-[32px] w-[32px] items-center justify-center md:right-8 md:top-8 md:h-[44px] md:w-[44px];
+      span {
+        @apply text-[17.5px] md:text-[24px];
+      }
+    }
+
+    h5 {
+      max-width: 399px;
+      margin: auto;
+      @screen md {
+        font-size: 2rem !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.4em !important;
+      }
+    }
+  }
+}
+
+.form-modal--success {
+  .modal__container {
+    @apply px-[2.8rem] pb-8 pt-[3.9rem] md:w-[511px] md:px-[9.5rem] md:pb-[2.4rem] md:pt-[4.8rem] xl:w-[586px] xl:px-[9.8rem];
+  }
+}
+
+.report__image-modal {
+  @apply p-8 transition-opacity md:p-12 xl:p-16;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  overflow-y: auto;
+  opacity: 0;
+}
+
+.report__image-modal img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.report__image-modal.active {
+  opacity: 1;
+}
+
+.report__image-modal__container {
+  @apply bg-blue;
+  position: relative;
+  width: 88.88888888888889vw;
+  max-width: 600px;
+  aspect-ratio: 320/420;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @screen xl {
+    aspect-ratio: 600/790;
+  }
+}
+
+.report__image-modal .close-img {
+  @apply right-[18px] top-[18px] h-[22px] w-[22px] md:right-8 md:top-8 md:h-[24px] md:w-[24px];
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.report__image-modal.active .close-img:hover {
+  transition: 1s ease;
+}

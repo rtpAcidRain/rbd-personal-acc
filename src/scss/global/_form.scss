@@ -1,0 +1,452 @@
+.feedback {
+  &-block {
+    padding-bottom: 50px;
+    & > .container--grid {
+      display: flex;
+      flex-direction: column-reverse;
+      & > .feedback {
+        margin-bottom: 50px;
+      }
+    }
+
+    &__information {
+      display: flex;
+      ul {
+        margin-top: auto;
+        li {
+          &:not(:first-child) {
+            margin-top: 4px;
+          }
+          &:last-child {
+            margin-top: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@screen md {
+  .feedback {
+    &-block {
+      & > .container--grid {
+        display: grid;
+        & > .feedback {
+          margin-bottom: 0;
+        }
+      }
+
+      &__information {
+        ul {
+          li {
+            &:not(:first-child) {
+              margin-top: setSize(4);
+            }
+
+            &:last-child {
+              margin-top: setSize(68);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.feedback {
+  .inputs {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+
+  .button__container {
+    margin-top: 24px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-direction: column-reverse;
+    p {
+      a {
+        display: inline;
+        @apply transition-colors;
+        &:hover {
+          //   @apply text-white;
+        }
+      }
+    }
+
+    .button {
+      width: 100%;
+    }
+
+    .button-primary {
+      width: 100%;
+    }
+  }
+}
+
+.input {
+  --plusheight: 1.35em;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  position: relative;
+  cursor: default;
+
+  input,
+  textarea {
+    padding-bottom: 10px;
+    transition: border-color 0.2s ease-in;
+  }
+
+  input {
+    -webkit-appearance: inherit;
+    -moz-appearance: inherit;
+    appearance: inherit;
+    background-color: inherit;
+    border-color: inherit;
+    border-width: inherit;
+    border-radius: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    --tw-shadow: inherit;
+    @apply text-body4 xl:text-[2rem] xl:leading-[1.45em];
+    padding: 0;
+    height: 0;
+  }
+
+  &__item {
+    // padding-bottom: 10px !important;
+  }
+
+  &__tip {
+    top: calc(100% + 12px);
+  }
+
+  &__title {
+    transition: font-size 0.2s ease-in, color 0.2s ease-in, top 0.2s ease-in;
+    top: 30px;
+    left: 0;
+    cursor: text;
+    @apply text-body4 text-greyBlue xl:text-[2rem] xl:leading-[1.45em];
+    padding-bottom: 10px;
+  }
+
+  &.active {
+    .input__title {
+      top: 0;
+      cursor: default;
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.4em;
+      position: absolute;
+      padding-bottom: 0;
+    }
+
+    input {
+      height: auto;
+      padding-bottom: 10px !important;
+    }
+  }
+
+  &.error {
+  }
+
+  .icon {
+    position: absolute;
+    right: 0;
+    bottom: 3px;
+  }
+
+  &.input--date {
+    width: 385px;
+    padding-right: 44px;
+
+    &.hovered-line-anim::before {
+      width: calc(100% - 44px);
+    }
+  }
+}
+// SELECT
+
+.select {
+  position: relative;
+
+  select {
+    display: none;
+  }
+
+  .select-title {
+    @apply bg-lightBlue transition-colors;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    p {
+      @apply text-text1 transition-colors;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 23px;
+    }
+
+    span {
+      @apply text-text1 transition-colors;
+      font-size: 30px;
+    }
+
+    &:hover {
+      @apply bg-blue;
+      p {
+      }
+      span {
+      }
+    }
+    &.select-arrow-active {
+      @apply bg-text2;
+      p {
+        color: #fff;
+      }
+      span {
+        color: #fff;
+        transform: scale(1, -1);
+      }
+    }
+  }
+
+  .select-items {
+    @apply bg-lightBlue text-body5 xl:text-body3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    & > div {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      &::before {
+        @apply bg-text1;
+        content: "";
+        min-width: 8px;
+        border-radius: 50%;
+        height: 8px;
+      }
+    }
+  }
+
+  .select-hide {
+    display: none;
+  }
+
+  @screen md {
+    .select-title {
+      padding: 24px 30px;
+
+      p {
+        font-size: 20px;
+        line-height: 30px;
+      }
+
+      span {
+        font-size: 36px;
+      }
+    }
+  }
+  @screen xl {
+    .select-title {
+      padding: 30px;
+
+      p {
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+
+    .select-items {
+      padding: 20px 30px;
+      gap: 20px;
+    }
+  }
+}
+
+textarea {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  resize: none;
+}
+
+textarea,
+pre {
+  -moz-tab-size: 0;
+  -o-tab-size: 0;
+  -webkit-tab-size: 0;
+  tab-size: 0;
+}
+
+.checkbox {
+  @apply relative h-8 w-8 cursor-pointer;
+
+  min-width: 20px;
+
+  &__item {
+    &::before,
+    &::after {
+      overflow: hidden;
+      @apply absolute;
+      border-radius: 5px;
+    }
+
+    &::before {
+      content: "";
+      @apply inset-0 border border-text2;
+      transition: border-color 0.2s ease-in;
+    }
+
+    &::after {
+      @apply left-1/2 top-1/2 hidden h-[14px] w-[14px] -translate-x-1/2 -translate-y-1/2 bg-contain bg-center;
+      content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3E%3Cpath d='M11.6663 3.79167L5.24967 10.2083L2.33301 7.29167' stroke='white' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    }
+  }
+
+  input {
+    visibility: hidden;
+
+    &:checked + .checkbox__item {
+      &::before {
+        @apply bg-text2;
+      }
+
+      &::after {
+        @apply block;
+      }
+    }
+  }
+
+  &:hover {
+    .checkbox__item {
+      &::before {
+        @apply border-text1;
+      }
+    }
+    input {
+      &:checked + .checkbox__item {
+        &::before {
+          @apply bg-text1;
+        }
+      }
+    }
+  }
+}
+
+@screen md {
+  .feedback {
+    #connect & {
+      row-gap: 43px;
+    }
+
+    .button__container {
+      flex-direction: column-reverse;
+      gap: 40px;
+
+      .button {
+        width: fit-content;
+      }
+    }
+  }
+
+  .input {
+    &__title {
+      //   @apply text-7;
+    }
+
+    &.active {
+      .input__title {
+        // @apply text-11;
+      }
+    }
+  }
+}
+
+.input.hovered-line-anim,
+.input > .hovered-line-anim {
+  &::before {
+    content: "";
+    height: 1px;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    width: 100%;
+    position: absolute;
+    @apply bg-text2 transition-colors;
+  }
+}
+
+.input.error {
+  margin-bottom: 30px;
+  &.hovered-line-anim,
+  & > .hovered-line-anim {
+    &::before {
+      @apply bg-errorColor;
+    }
+  }
+  &::after {
+    font-family: "#{$icomoon-font-family}" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: $icon-error;
+    color: #d92f45;
+    position: absolute;
+    font-size: 24px;
+    right: 0;
+  }
+}
+
+.input.checked {
+  &::after {
+    font-family: "#{$icomoon-font-family}" !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: $icon-check3;
+    position: absolute;
+    font-size: 24px;
+    right: 0;
+  }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3),
+  only screen and (min-resolution: 124.8dpi),
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (min--moz-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (-o-min-device-pixel-ratio: 2/1) and (min-width: 320px),
+  only screen and (min-device-pixel-ratio: 2) and (min-width: 320px),
+  only screen and (min-resolution: 192dpi) and (min-width: 320px),
+  only screen and (min-resolution: 2dppx) and (min-width: 320px) {
+  .input.hovered-line-anim,
+  .input > .hovered-line-anim {
+    &::before {
+      height: 1.3px;
+    }
+  }
+}

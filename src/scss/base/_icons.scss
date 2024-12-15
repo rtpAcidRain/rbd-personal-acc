@@ -1,0 +1,141 @@
+@import "./iconvars";
+
+@font-face {
+  font-family: "#{$icomoon-font-family}";
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q61eft");
+  src: url("#{$icomoon-font-path}/#{$icomoon-font-family}.eot?q61eft#iefix")
+      format("embedded-opentype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?q61eft")
+      format("truetype"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.woff?q61eft")
+      format("woff"),
+    url("#{$icomoon-font-path}/#{$icomoon-font-family}.svg?q61eft##{$icomoon-font-family}")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "#{$icomoon-font-family}" !important;
+  speak: never;
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow2-down {
+  &:before {
+    content: $icon-arrow2-down;
+  }
+}
+.icon-arrow2-left {
+  &:before {
+    content: $icon-arrow2-left;
+  }
+}
+.icon-arrow2-light {
+  &:before {
+    content: $icon-arrow2-light;
+  }
+}
+.icon-arrow2-right {
+  &:before {
+    content: $icon-arrow2-right;
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down;
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left;
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right;
+    // color: #29386f;
+  }
+}
+.icon-arrow-right-down {
+  &:before {
+    content: $icon-arrow-right-down;
+  }
+}
+.icon-arrow-right-up {
+  &:before {
+    content: $icon-arrow-right-up;
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check;
+    color: #bc0119;
+  }
+}
+.icon-check2 {
+  &:before {
+    content: $icon-check2;
+  }
+}
+.icon-check3 {
+  &:before {
+    content: $icon-check3;
+  }
+}
+.icon-cross {
+  &:before {
+    content: $icon-cross;
+  }
+}
+.icon-desk {
+  &:before {
+    content: $icon-desk;
+    color: #fff;
+  }
+}
+.icon-error {
+  &:before {
+    content: $icon-error;
+    color: #d92f45;
+  }
+}
+.icon-link {
+  &:before {
+    content: $icon-link;
+  }
+}
+.icon-menu {
+  &:before {
+    content: $icon-menu;
+  }
+}
+.icon-pin {
+  &:before {
+    content: $icon-pin;
+    color: #bc0119;
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play;
+    color: #162148;
+  }
+}
+.icon-user {
+  &:before {
+    content: $icon-user;
+  }
+}

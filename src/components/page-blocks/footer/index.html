@@ -1,0 +1,53 @@
+<footer class="footer py-12 border-t border-blue">
+  <div
+    class="container flex items-center justify-between text-greyBlue text-listTitle"
+  >
+    <p>ⓒ RBGroup 2024</p>
+    <a href="#">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<div class="modal form-modal form-modal--success" id="formSuccess">
+  <div class="modal__container">
+    <a href="#" class="modal__close"><span class="icon-cross"></span></a>
+    <svg
+      class="w-[6rem] sm:w-[7.2rem] absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-0"
+      viewBox="0 0 60 60"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="29.144" cy="28.356" r="15.7534" fill="white" />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M30 52.5C42.4264 52.5 52.5 42.4264 52.5 30C52.5 17.5736 42.4264 7.5 30 7.5C17.5736 7.5 7.5 17.5736 7.5 30C7.5 42.4264 17.5736 52.5 30 52.5ZM29.3405 39.0338L41.8405 24.0338L38.1595 20.9662L27.339 33.9508L21.6941 28.3059L18.3059 31.6941L25.8059 39.1941L27.661 41.0492L29.3405 39.0338Z"
+        fill="#BC0119"
+      />
+    </svg>
+    <div class="modal__element">
+      <p
+        class="text-body4 md:text-body3 xl:text-body1 text-center mb-4 md:mb-[12px]"
+      >
+        Спасибо!
+      </p>
+      <p
+        class="text-msub2 xl:text-sub2 text-center mb-[12px] md:mb-8 uppercase"
+      >
+        Ваша заявка отправлена
+      </p>
+      <p
+        class="text-body5 md:text-body4 xl:text-body3 text-center mb-8 md:mb-[24px]"
+      >
+        В ближайшее время мы свяжемся <br class="hidden md:block" />
+        с вами, чтобы обсудить детали
+      </p>
+      <a
+        href="#"
+        onclick="сloseModals('#formSuccess'); return false"
+        class="button-primary w-full"
+      >
+        <span>Ок</span>
+      </a>
+    </div>
+  </div>
+</div>

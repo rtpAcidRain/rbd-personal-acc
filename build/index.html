@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport"
 				content="width=device-width, initial-scale=1.0">
 	<meta name="description"
-				content="Gulp pack for easy html/php markup development">
+				content="Личный кабинет поставщика">
 	<meta name="keywords"
 				content="">
 	<link rel="shortcut icon"
@@ -22,17 +22,452 @@
 				href="css/libs.min.css">
 	<link rel="stylesheet"
 				href="css/style.min.css">
-	<title>Easy-webdev-startpack v3.0</title>
+	<title>Личный кабинет поставщика</title>
 </head>
 
 
 <body>
-	<header class="header"></header>
+	<div class="page">
+		<header id="header">
+  <div class="header border-b border-blue">
+    <div class="items-center grid h-full grid-cols-12 gap-x-12 container">
+      <a href="/" class="col-span-2">
+        <img
+          class=""
+          src="https://rus-distribution.ru/images/logo.svg"
+          alt="Русбизнес Дистрибьюшн"
+        />
+      </a>
+      <p class="text-body2 col-span-5">Личный кабинет поставщика</p>
+      <div class="col-span-5 flex h-full items-center">
+        <div class="header__bar">
+          <a href="#" class="messages">
+            <span>
+              <svg
+                width="33"
+                height="32"
+                viewBox="0 0 33 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M26.268 7.70367L26.6837 7.42588V7.42588L26.268 7.70367ZM26.268 21.6297L26.6837 21.9075L26.268 21.6297ZM24.7965 23.1012L24.5188 22.6855H24.5188L24.7965 23.1012ZM19.1668 23.9982L19.1646 23.4982C18.8894 23.4994 18.6668 23.7229 18.6668 23.9982H19.1668ZM19.1668 24L19.614 24.2236C19.6488 24.1542 19.6668 24.0777 19.6668 24H19.1668ZM17.3946 27.5445L17.8418 27.7681V27.7681L17.3946 27.5445ZM15.6057 27.5445L15.1585 27.7681L15.6057 27.5445ZM13.8335 24H13.3335C13.3335 24.0777 13.3516 24.1542 13.3863 24.2236L13.8335 24ZM13.8335 23.9982H14.3335C14.3335 23.7229 14.111 23.4994 13.8357 23.4982L13.8335 23.9982ZM8.20379 23.1012L8.48157 22.6855H8.48157L8.20379 23.1012ZM6.73232 21.6297L7.14806 21.352L6.73232 21.6297ZM6.73232 7.70367L7.14806 7.98145L6.73232 7.70367ZM8.20379 6.2322L8.48157 6.64794L8.20379 6.2322ZM24.7965 6.2322L24.5188 6.64794V6.64794L24.7965 6.2322ZM27.6668 14.6667C27.6668 12.8045 27.6674 11.3702 27.5519 10.2346C27.4355 9.09058 27.1972 8.19433 26.6837 7.42588L25.8523 7.98145C26.2376 8.5582 26.4487 9.27085 26.557 10.3358C26.6662 11.4091 26.6668 12.7837 26.6668 14.6667H27.6668ZM26.6837 21.9075C27.1972 21.1391 27.4355 20.2428 27.5519 19.0988C27.6674 17.9632 27.6668 16.5289 27.6668 14.6667H26.6668C26.6668 16.5497 26.6662 17.9244 26.557 18.9976C26.4487 20.0626 26.2376 20.7752 25.8523 21.352L26.6837 21.9075ZM25.0743 23.5169C25.7113 23.0914 26.2581 22.5445 26.6837 21.9075L25.8523 21.352C25.4996 21.8797 25.0465 22.3328 24.5188 22.6855L25.0743 23.5169ZM19.169 24.4982C20.6051 24.492 21.7501 24.4644 22.6883 24.3348C23.6346 24.2039 24.4031 23.9654 25.0743 23.5169L24.5188 22.6855C24.0148 23.0222 23.4069 23.2259 22.5514 23.3442C21.6878 23.4635 20.6055 23.4919 19.1646 23.4982L19.169 24.4982ZM19.6668 24V23.9982H18.6668V24H19.6668ZM17.8418 27.7681L19.614 24.2236L18.7196 23.7764L16.9474 27.3209L17.8418 27.7681ZM15.1585 27.7681C15.7113 28.8737 17.289 28.8737 17.8418 27.7681L16.9474 27.3209C16.7631 27.6894 16.2372 27.6894 16.0529 27.3209L15.1585 27.7681ZM13.3863 24.2236L15.1585 27.7681L16.0529 27.3209L14.2807 23.7764L13.3863 24.2236ZM13.3335 23.9982V24H14.3335V23.9982H13.3335ZM7.926 23.5169C8.59723 23.9654 9.3657 24.2039 10.312 24.3348C11.2503 24.4644 12.3952 24.492 13.8313 24.4982L13.8357 23.4982C12.3948 23.4919 11.3125 23.4635 10.4489 23.3442C9.59339 23.2259 8.98548 23.0222 8.48157 22.6855L7.926 23.5169ZM6.31659 21.9075C6.74218 22.5445 7.28906 23.0914 7.926 23.5169L8.48157 22.6855C7.95382 22.3328 7.50069 21.8797 7.14806 21.352L6.31659 21.9075ZM5.3335 14.6667C5.3335 16.5289 5.33289 17.9632 5.44842 19.0988C5.56479 20.2428 5.80313 21.1391 6.31659 21.9075L7.14806 21.352C6.76269 20.7752 6.55161 20.0626 6.44328 18.9976C6.3341 17.9244 6.3335 16.5497 6.3335 14.6667H5.3335ZM6.31659 7.42588C5.80313 8.19433 5.56479 9.09058 5.44842 10.2346C5.33289 11.3702 5.3335 12.8045 5.3335 14.6667H6.3335C6.3335 12.7837 6.3341 11.4091 6.44328 10.3358C6.55161 9.27085 6.76269 8.5582 7.14806 7.98145L6.31659 7.42588ZM7.926 5.81647C7.28906 6.24206 6.74218 6.78894 6.31659 7.42588L7.14806 7.98145C7.50069 7.4537 7.95382 7.00057 8.48157 6.64794L7.926 5.81647ZM15.1668 4.83337C13.3046 4.83337 11.8703 4.83277 10.7347 4.94829C9.5907 5.06467 8.69445 5.30301 7.926 5.81647L8.48157 6.64794C9.05832 6.26257 9.77097 6.05149 10.8359 5.94316C11.9092 5.83398 13.2838 5.83337 15.1668 5.83337V4.83337ZM17.8335 4.83337H15.1668V5.83337H17.8335V4.83337ZM25.0743 5.81647C24.3059 5.30301 23.4096 5.06467 22.2656 4.94829C21.13 4.83277 19.6957 4.83337 17.8335 4.83337V5.83337C19.7165 5.83337 21.0912 5.83398 22.1644 5.94316C23.2294 6.05149 23.942 6.26257 24.5188 6.64794L25.0743 5.81647ZM26.6837 7.42588C26.2581 6.78894 25.7113 6.24206 25.0743 5.81647L24.5188 6.64794C25.0465 7.00057 25.4996 7.4537 25.8523 7.98145L26.6837 7.42588Z"
+                  fill="#222222"
+                />
+                <circle cx="21.8333" cy="14.6667" r="1.33333" fill="#222222" />
+                <circle cx="16.4998" cy="14.6667" r="1.33333" fill="#222222" />
+                <circle cx="11.1668" cy="14.6667" r="1.33333" fill="#222222" />
+              </svg>
+            </span>
+          </a>
+          <a href="#" class="notifications active">
+            <span>
+              <svg
+                width="33"
+                height="32"
+                viewBox="0 0 33 32"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.09712 11.9599C9.51625 8.18774 12.7047 5.33398 16.5 5.33398V5.33398C20.2953 5.33398 23.4838 8.18775 23.9029 11.9599L24.2386 14.9815C24.3068 15.5956 24.341 15.9026 24.3978 16.2031C24.5354 16.9298 24.7731 17.634 25.1041 18.2954C25.241 18.5689 25.3999 18.8338 25.7178 19.3636L26.6826 20.9717C27.4884 22.3146 27.8912 22.986 27.604 23.4933C27.3168 24.0006 26.5337 24.0006 24.9676 24.0006H8.03238C6.46627 24.0006 5.68322 24.0006 5.39599 23.4933C5.10876 22.986 5.51164 22.3146 6.31739 20.9717L7.28221 19.3636C7.60009 18.8338 7.75904 18.5689 7.89591 18.2954C8.22691 17.634 8.46459 16.9298 8.60216 16.2031C8.65904 15.9026 8.69316 15.5956 8.76139 14.9815L9.09712 11.9599Z"
+                  stroke="#162148"
+                />
+                <path
+                  d="M12.6363 24.5412C12.8642 25.5334 13.3664 26.4103 14.065 27.0356C14.7635 27.661 15.6195 28 16.5 28C17.3805 28 18.2365 27.661 18.935 27.0356C19.6336 26.4103 20.1358 25.5334 20.3637 24.5412"
+                  stroke="#162148"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+          </a>
+          <a href="/en/" class="lang-switcher uppercase"><span>en</span></a>
+        </div>
+        <div
+          class="flex-1 justify-end pr-[3px] h-full account-button tool-appearence-filt"
+        >
+          <a href="#" class="account-button__container">
+            <span class="text-body8 block w-48"
+              >ООО «РусБизнес <br />
+              Дистрибьюшн»</span
+            >
+            <div class="account-button__icon">
+              <svg
+                width="21"
+                height="20"
+                viewBox="0 0 21 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M8.60155 13.5049L7.65213 12.2356L7.08832 11.4611C7.50772 11.3572 7.84263 11.2519 8.09151 11.1452C8.35421 11.0327 8.61077 10.8813 8.86118 10.6923C9.73379 10.0332 10.1686 9.1245 10.1686 7.96775C10.1686 6.81099 9.7722 5.90376 8.98101 5.23451C8.58158 4.89989 8.13299 4.66623 7.6337 4.53498C7.13441 4.40229 6.45691 4.33594 5.59967 4.33594H2.16455L4.35682 6.34223H5.35386C6.31557 6.34223 6.96388 6.46483 7.30033 6.70858C7.70898 7.00282 7.91484 7.44273 7.91484 8.02688C7.91484 8.61103 7.72127 9.06104 7.33259 9.33364C6.98078 9.58028 6.42926 9.71442 5.68263 9.73749L3.38743 9.73894V9.75192L7.52462 15.6641H10.2838L8.60155 13.5049Z"
+                  fill="white"
+                />
+                <path
+                  d="M19.23 10.4673C19.06 10.2481 18.8686 10.0678 18.6542 9.92788C18.4399 9.78798 18.1305 9.64086 17.7278 9.48653C18.2102 9.25143 18.5532 8.97161 18.7568 8.6442C18.9605 8.31679 19.0631 7.88697 19.0631 7.35331C19.0631 6.81964 18.9498 6.37829 18.7216 5.95713C18.4935 5.53596 18.1734 5.19269 17.7599 4.9273C17.394 4.69796 16.979 4.54219 16.5165 4.45998C16.0525 4.37777 15.3619 4.33594 14.4462 4.33594H12.0251L14.1139 6.30906L14.1996 6.38983V6.38694H15.1138C16.2638 6.38694 16.8381 6.7706 16.8381 7.53937C16.8381 7.94899 16.6865 8.24467 16.3848 8.42641C16.1811 8.54901 15.8917 8.62978 15.5181 8.66872V10.763C16.1597 10.7875 16.6467 10.9058 16.9759 11.1178C17.3495 11.3572 17.5364 11.7265 17.5364 12.2255C17.5364 12.7246 17.3587 13.088 17.0035 13.3145C16.6482 13.5409 16.0816 13.6549 15.3022 13.6549H14.1981V8.67305L11.9639 6.59175V15.6641H15.1751C16.4369 15.6641 17.4246 15.4693 18.1397 15.0799C18.6588 14.7958 19.0616 14.4092 19.3479 13.9188C19.6343 13.4299 19.7767 12.8861 19.7767 12.2861C19.7767 11.5419 19.5945 10.9361 19.2285 10.4673H19.23Z"
+                  fill="white"
+                />
+              </svg>
+            </div>
+          </a>
+          <div class="tool-appearence-filt__list">
+            <ul class="appearamce-list">
+              <li>
+                <a href="#"
+                  >Редактировать <br />
+                  профиль</a
+                >
+              </li>
+              <li><a href="#">Выйти</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-12 gap-12 container">
+    <div class="switcher reports centered-container">
+      <div
+        class="marketing-promotion__tab-filter tab-filter reports__filter no-scrollbar"
+      >
+        <div
+          class="tab-filter__container reports__filter-container text-body5 xl:text-body4"
+        >
+          <a class="switcher__tab" href="#"><span>Портфель</span></a>
+          <a class="switcher__tab active" href="#">
+            <span>Товары и цены</span>
+          </a>
+          <a class="switcher__tab" href="#">
+            <span>Маркетинг</span>
+          </a>
+          <a class="switcher__tab" href="#">
+            <span>Отчеты</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="tips active flex flex-col text-center p-12 gap-8 bg-bullets-level2 text-text2 w-fit relative"
+  >
+    <button class="tips__close" type="button">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M15 5L5 15"
+          stroke="#162148"
+          stroke-linecap="square"
+          stroke-linejoin="round"
+        />
+        <path
+          d="M5 5L15 15"
+          stroke="#162148"
+          stroke-linecap="square"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
+    <p class="text-body7">Подсказки</p>
+    <p class="text-body6">
+      Текст подсказки в любое количество строк, компонент резиновый по высоте
+    </p>
+  </div>
+</header>
 
-	<main class="main"></main>
-	<footer class="footer"></footer>
+		<main class="main">
+			<div class="sidemenu active anchor">
+  <button type="button" class="sidemenu__toggleButton">
+    <svg
+      width="25"
+      height="25"
+      viewBox="0 0 25 25"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M19.791 7.2915H5.20768" stroke="white" stroke-linecap="round" />
+      <path d="M19.791 12.5H5.20768" stroke="white" stroke-linecap="round" />
+      <path d="M19.791 17.7085H5.20768" stroke="white" stroke-linecap="round" />
+    </svg>
+    <div>
+      <svg
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path d="M15.625 6.25L9.375 12.5L15.625 18.75" stroke="#162148" />
+      </svg>
+      <span> Скрыть меню </span>
+    </div>
+  </button>
+  <ul class="sidemenu__container">
+    <li>
+      <a href="#productcase">Продуктовый портфель</a>
+    </li>
+    <li>
+      <a href="#productstatus">Статус последней поставки</a>
+    </li>
+    <li>
+      <a href="#geographyproducT">География присутствия товаров</a>
+    </li>
+  </ul>
+</div>
+<div class="grid grid-cols-12 gap-12 container">
+  <div class="centered-container">
+    <div class="mb-32 anch-sec" id="productcase">
+      <h1 class="text-h3desk mb-20">ПРОДУКТОВЫЙ ПОРТФЕЛЬ 2023</h1>
+      <div class="flex flex-col gap-8 mb-16">
+        <div
+          class="flex items-center justify-between py-4 px-8 bg-lightBlue w-[691px]"
+        >
+          <span class="text-sub2">Ассортимент по прайсу</span>
+          <span
+            class="text-sub1 flex items-center justify-center rounded-full p-8 bg-white w-[96px]"
+            >-</span
+          >
+        </div>
+        <div
+          class="flex items-center justify-between py-4 px-8 bg-lightBlue w-[691px]"
+        >
+          <span class="text-sub2">Согласованный ассортимент</span>
+          <span
+            class="text-sub1 flex items-center justify-center rounded-full p-8 bg-white w-[96px]"
+            >-</span
+          >
+        </div>
+        <div
+          class="flex items-center justify-between py-4 px-8 bg-lightBlue w-[691px]"
+        >
+          <span class="text-sub2">Новинки ассортимента</span>
+          <span
+            class="text-sub1 flex items-center justify-center rounded-full p-8 bg-white w-[96px]"
+            >-</span
+          >
+        </div>
+      </div>
+      <div>
+        <div class="text-body3 mb-12">
+          <span class="block mb-[8px] h-[1px] bg-text1 w-[73px]"></span>
+          Категории товаров
+        </div>
+        <div class="product-category">
+          <div class="relative">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide">
+                  <span>БАДЫ</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>Витамины и минералы</span>
+                  <span class="product-category__notification">20</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>Гигиена</span>
+                  <span class="product-category__notification">5</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>БАДЫ</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>Витамины и минералы</span>
+                  <span class="product-category__notification">20</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>Гигиена</span>
+                  <span class="product-category__notification">5</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>БАДЫ</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>Витамины и минералы</span>
+                  <span class="product-category__notification">20</span>
+                </a>
+                <a href="#" class="swiper-slide">
+                  <span>Гигиена</span>
+                  <span class="product-category__notification">5</span>
+                </a>
+              </div>
+            </div>
+            <div class="swiper-controls">
+              <div class="swiper-button swiper-button-prev"></div>
+              <div class="swiper-button swiper-button-next"></div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-48 anch-sec" id="productstatus">
+      <h2 class="text-h2 mb-8 uppercase">статус последней поставки</h2>
+      <div class="flex flex-col gap-8">
+        <a href="#" class="ml-auto text-body3">Смотреть все</a>
+        <div>
+          <div
+            class="flex items-center justify-between bg-lightBlue border border-b-0 border-blue p-12"
+          >
+            <div>
+              <p class="text-sub2 mb-[14px]">Заказ от 30 января</p>
+              <p class="text-body3 text-greyBlue">
+                Номер <b class="text-text1">QWETYRE20231001-1</b>
+              </p>
+            </div>
+            <div class="text-h3desk">4 560 ₽</div>
+          </div>
+          <div
+            class="flex items-center justify-between border border-blue p-12"
+          >
+            <div>
+              <p class="text-body5 mb-8">01.03.2024</p>
+              <p class="text-body2">Доставлено на склад РБД</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="anch-sec" id="geographyproducT">
+      <h2 class="text-h2 mb-16 uppercase">география присутствия товаров</h2>
+      <div class="border border-blue p-[24px] flex mb-[24px]">
+        <div class="flex-1">
+          <div class="text-body5 text-greyBlue mb-2">Формат присутствия</div>
+          <div class="text-sub2">Маркетплейсы</div>
+        </div>
+        <div
+          class="flex-1 flex flex-col gap-[16px] pl-[24px] border-l border-blue"
+        >
+          <div class="text-sub2">Ozon</div>
+          <div class="text-sub2">Wildberries</div>
+          <div class="text-sub2">Яндекс Маркет</div>
+        </div>
+      </div>
+      <table class="def-table">
+        <tr>
+          <th>
+            <span> Наименование склада </span>
+          </th>
+          <th>
+            <span> Количество товара, шт </span>
+          </th>
+        </tr>
+        <tr>
+          <td>
+            <span>
+              <span>Озон МО Жуковский РФЦ</span>
+            </span>
+          </td>
+          <td>
+            <span>
+              <span>-</span>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span>
+              <span>Озон МО Жуковский РФЦ</span>
+            </span>
+          </td>
+          <td>
+            <span>
+              <span>-</span>
+            </span>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <span>
+              <span>Озон МО Жуковский РФЦ</span>
+            </span>
+          </td>
+          <td>
+            <span>
+              <span>-</span>
+            </span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
 
-	<script src="js/libs.min.js"></script>
+			
+			
+			
+			
+			
+			
+			
+		</main>
+		<footer class="footer py-12 border-t border-blue">
+  <div
+    class="container flex items-center justify-between text-greyBlue text-listTitle"
+  >
+    <p>ⓒ RBGroup 2024</p>
+    <a href="#">Политика конфиденциальности</a>
+  </div>
+</footer>
+
+<div class="modal form-modal form-modal--success" id="formSuccess">
+  <div class="modal__container">
+    <a href="#" class="modal__close"><span class="icon-cross"></span></a>
+    <svg
+      class="w-[6rem] sm:w-[7.2rem] absolute left-1/2 -translate-x-1/2 -translate-y-1/2 top-0"
+      viewBox="0 0 60 60"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <circle cx="29.144" cy="28.356" r="15.7534" fill="white" />
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M30 52.5C42.4264 52.5 52.5 42.4264 52.5 30C52.5 17.5736 42.4264 7.5 30 7.5C17.5736 7.5 7.5 17.5736 7.5 30C7.5 42.4264 17.5736 52.5 30 52.5ZM29.3405 39.0338L41.8405 24.0338L38.1595 20.9662L27.339 33.9508L21.6941 28.3059L18.3059 31.6941L25.8059 39.1941L27.661 41.0492L29.3405 39.0338Z"
+        fill="#BC0119"
+      />
+    </svg>
+    <div class="modal__element">
+      <p
+        class="text-body4 md:text-body3 xl:text-body1 text-center mb-4 md:mb-[12px]"
+      >
+        Спасибо!
+      </p>
+      <p
+        class="text-msub2 xl:text-sub2 text-center mb-[12px] md:mb-8 uppercase"
+      >
+        Ваша заявка отправлена
+      </p>
+      <p
+        class="text-body5 md:text-body4 xl:text-body3 text-center mb-8 md:mb-[24px]"
+      >
+        В ближайшее время мы свяжемся <br class="hidden md:block" />
+        с вами, чтобы обсудить детали
+      </p>
+      <a
+        href="#"
+        onclick="сloseModals('#formSuccess'); return false"
+        class="button-primary w-full"
+      >
+        <span>Ок</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+	</div>
+	<script
+  type="text/javascript"
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"
+></script>
+<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
 
 </body>
